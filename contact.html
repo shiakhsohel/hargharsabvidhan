@@ -105,12 +105,12 @@
                     <div class="col-lg-9 text-right d-none d-lg-block">
                         <nav class="menu-wrapper">
                             <ul class="main-menu" id="mobile-menu">
-                                <li class="active"><a href="#">मुख्यपृष्ठ</a></li>
+                                <li class="active"><a href="index.html">मुख्यपृष्ठ</a></li>
                                 <li><a href="#feature">कार्यक्रम / उपक्रम</a></li>
                                 <li><a href="#portfolio">दान करा</a></li>
                                 <li><a href="#page">Gallery</a></li>
                                 <li><a href="#blog">आमच्याविषयी</a></li>
-                                <li><a href="#contact-us">संपर्क साधा</a></li>
+                                <li><a href="contact.html">संपर्क साधा</a></li>
                                 <!-- <li class="search-trigger d-none d-lg-inline-block"><a href="javascript:void(0)"><i class="fas fa-search"></i></a>
                                 </li> -->
                             </ul>
@@ -157,7 +157,7 @@
     
     
      <!-- Start Video Box Area -->
-<div class="video-box-area pt-70 pb-70" id="feature">
+<!-- <div class="video-box-area pt-70 pb-70" id="feature">
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
@@ -198,11 +198,107 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- End Video Box Area -->
 
 
-    
+<div class="contact-container">
+    <h2>संपर्क साधा</h2>
+    <div class="contact-info">
+        <div class="contact-item">
+            <p><strong>पता 1:</strong> सिद्धेश्वर वार्ड, बोरबन, बौद्ध विहार जवळ, उमरखेड, जि. यवतमाळ ४४५ २०६</p>
+            <div class="map">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15033.61382857191!2d77.6614173894842!3d19.610041774044085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd193dcf8e4aec3%3A0x27eacb6d8949e1a0!2sBorban%2C%20Umarkhed%2C%20Maharashtra%20445206!5e0!3m2!1sen!2sin!4v1723834599465!5m2!1sen!2sin"
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+        <div class="contact-item">
+            <p><strong>पता 2:</strong> दादावाडी, जैन मंदीर शेजारी, वसमत रोड, परभणी ४३१ ४०१</p>
+            <div class="map">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30132.469690172617!2d76.77472811083982!3d19.2580547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd01813c72f544d%3A0x4567106521f3e33b!2sJinkushal%20Dadawadi%20Jain%20Mandir!5e0!3m2!1sen!2sin!4v1723834932122!5m2!1sen!2sin"
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+        <div class="contact-item">
+            <p><strong>फोन:</strong> +91 703022 6666</p>
+        </div>
+        <div class="contact-item">
+            <p><strong>ईमेल:</strong> <a href="mailto:hargharsanvidhan@gmail.com">hargharsanvidhan@gmail.com</a></p>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Google Fonts Import */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Hind:wght@300;400;700&display=swap');
+
+    .contact-container {
+        padding: 20px;
+        background-color: #f5f5f5;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        max-width: 90%;
+        margin: auto;
+        box-sizing: border-box;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        font-family: 'Roboto', sans-serif;
+    }
+    .contact-container h2 {
+        text-align: center;
+        color: #333;
+        font-size: 30px;
+        margin-bottom: 20px;
+        font-family: 'Hind', sans-serif;
+        font-weight: 700;
+    }
+    .contact-info {
+        margin-bottom: 20px;
+    }
+    .contact-item {
+        margin-bottom: 25px;
+        padding: 10px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .contact-item p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #555;
+    }
+    .contact-item a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    .contact-item a:hover {
+        text-decoration: underline;
+    }
+    .map iframe {
+        width: 100%;
+        height: 300px;
+        border: 0;
+        border-radius: 8px;
+    }
+    @media (max-width: 768px) {
+        .contact-container h2 {
+            font-size: 24px;
+        }
+        .contact-item p {
+            font-size: 14px;
+        }
+        .map iframe {
+            height: 250px;
+        }
+    }
+</style>
+
     
     
     <!-- Start Footer Area -->
