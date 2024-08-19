@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Har Ghar Tiranga Selfie</title>
+    <style>
+        #frame {
+            position: relative;
+            display: inline-block;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+        #frame img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+        #tiranga-frame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        #download-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="frame">
+    <img id="selfie" src="#" alt="Your Selfie" />
+    <img id="tiranga-frame" src="abc.jpg" alt="Tiranga Frame" />
+</div>
+
+<input type="file" accept="image/*" id="upload" />
+<br><br>
+<button id="download-btn">Download with Frame</button>
+
+<script>
+    const upload = document.getElementById('upload');
+    const selfie = document.getElementById('selfie');
+    const downloadButton = document.getElementById('download-btn');
+    const frame = document.getElementById('tiranga-frame');
+
+    upload.onchange = function (event) {
+        const [file] = event.target.files;
+        if (file) {
+            selfie.src = URL.createObjectURL(file);
+        }
+    };
+
+    downloadButton.onclick = function () {
+        if (!selfie.src || selfie.src === "#") {
+            alert("Please upload an image first.");
+            return;
+        }
+
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+
+        const image = new Image();
+        image.src = selfie.src;
+
+        image.onload = function () {
+            canvas.width = image.width;
+            canvas.height = image.height;
+
+            // Draw the uploaded image on the canvas
+            ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+            // Draw the frame on top of the image
+            const frameImage = new Image();
+            frameImage.src = frame.src;
+
+            frameImage.onload = function () {
+                ctx.drawImage(frameImage, 0, 0, canvas.width, canvas.height);
+                const link = document.createElement('a');
+                link.download = 'har_ghar_tiranga.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            };
+        };
+    };
+</script>
+
+</body>
+</html>
